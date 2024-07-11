@@ -19,12 +19,15 @@ def main():
 
         elif choice == '2':
             removed_item = input("inter the item to remove: ") # Prompt for and remove an item
-            shopping_list.remove(removed_item)
-            print(f"{removed_item} removed from the shopping list")
+            if removed_item in shopping_list:
+                shopping_list.remove(removed_item)
+                print(f"{removed_item} removed from the shopping list")
+            else:
+                print(f"{removed_item} is not found in shopping list")
 
 
         elif choice == '3':
-            return shopping_list
+            print(shopping_list)
             # Display the shopping list
 
         elif choice == '4':
