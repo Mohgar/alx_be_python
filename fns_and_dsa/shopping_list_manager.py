@@ -14,17 +14,19 @@ def main():
         if choice == '1':
             added_item = input("inter the item to add: ")
             shopping_list.append(added_item) # Prompt for and add an item
-            pass
+            print(f"{added_item} added to the shopping list")
+
 
         elif choice == '2':
             removed_item = input("inter the item to remove: ") # Prompt for and remove an item
             shopping_list.remove(removed_item)
-            pass
+            print(f"{removed_item} removed from the shopping list")
+
 
         elif choice == '3':
             return shopping_list
             # Display the shopping list
-            pass
+
         elif choice == '4':
             print("Goodbye!")
             break
