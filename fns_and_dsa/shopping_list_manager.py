@@ -4,21 +4,22 @@ def display_menu():
     print("2. Remove Item")
     print("3. View List")
     print("4. Exit")
-def main():
 
+
+def main():
     shopping_list = []
     while True:
         display_menu()
         choice = input("Enter your choice: ")
 
         if choice == '1':
-            added_item = input("inter the item to add: ")
-            shopping_list.append(added_item) # Prompt for and add an item
+            added_item = input("inter the item to add: ")  # Prompt for and add an item
+            shopping_list.append(added_item)
             print(f"{added_item} added to the shopping list")
 
 
         elif choice == '2':
-            removed_item = input("inter the item to remove: ") # Prompt for and remove an item
+            removed_item = input("inter the item to remove: ")  # Prompt for and remove an item
             if removed_item in shopping_list:
                 shopping_list.remove(removed_item)
                 print(f"{removed_item} removed from the shopping list")
@@ -27,8 +28,9 @@ def main():
 
 
         elif choice == '3':
-            print(shopping_list)
-            # Display the shopping list
+            for item in shopping_list:
+                print(item)
+                # Display the shopping list
 
         elif choice == '4':
             print("Goodbye!")
