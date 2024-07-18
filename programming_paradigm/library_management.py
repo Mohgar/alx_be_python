@@ -3,11 +3,13 @@ class Book:
         self.title = title
         self.author = author
         self._is_checked_out = False
+
     def check_out(self):
-        if self._is_checked_out:
-            return f"{self.title} is not available"
+        if not self._is_checked_out:
+            self._is_checked_out = True
+            print(f"Checked out: {self.title} by {self.author}")
         else:
-            return f"{self.title} is available"
+            print(f"{self.title} by {self.author} is already checked out")
     def return_book(self):
         if self._is_checked_out:
             return f"{self.title} is returned"
